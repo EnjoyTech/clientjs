@@ -108,9 +108,6 @@
 //      client.isSilverlight();
 //      client.getSilverlightVersion();
 //
-//      client.getMimeTypes();
-//      client.isMimeTypes();
-//
 //      client.isFont();
 //      client.getFonts();
 //
@@ -515,32 +512,6 @@
         return objPlugin.description;
       }
       return "";
-    },
-
-    //
-    // MIME TYPE METHODS
-    //
-
-    // Is Mime Types.  Check if a mime type is installed.
-    isMimeTypes: function() {
-      if (navigator.mimeTypes.length) {
-        return true;
-      }
-      return false;
-    },
-
-    // Get Mime Types.  Return a string containing a list of installed mime types.
-    getMimeTypes: function() {
-      var mimeTypeList = "";
-
-      for (var i = 0; i < navigator.mimeTypes.length; i++) {
-        if (i == navigator.mimeTypes.length - 1) {
-          mimeTypeList += navigator.mimeTypes[i].description;
-        } else {
-          mimeTypeList += navigator.mimeTypes[i].description + ", ";
-        }
-      }
-      return mimeTypeList;
     },
 
     //
